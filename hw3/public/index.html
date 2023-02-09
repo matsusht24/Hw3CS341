@@ -1,0 +1,76 @@
+<!-- Trent Matsushima CS 341 HW2 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
+    </script>
+    <script src="javascripts/script.js"></script>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>The Cheese Cake Place</title>
+</head>
+
+<body>
+    <!-- Displays header of page -->
+    <h1>Cheesecake Order Form</h1>
+    <!-- Image of cheesecake 200 x 200  -->
+    <a
+        href="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg"
+            width="200" height="200">
+    </a>
+    <br>
+    <!-- Table that holds drop down and radio -->
+    <div id="orderDiv">
+        <table>
+            <tr>
+                <th>Quantity</th>
+                <th>Topping</th>
+            </tr>
+            <tr>
+                <th><!-- drop down -->
+                    <select name="quantity" id="quantity">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7+">7+</option>
+                        <select>
+                </th>
+                <th><!-- Radio buttons  -->
+                    <input type="radio" id="plain" name="topping" value="Plain">
+                    <label for="plain">Plain</label><br>
+                    <input type="radio" id="cherry" name="topping" value="Cherry">
+                    <label for="cherry">Cherry</label><br>
+                    <input type="radio" id="chocolate" name="topping" value="Chocolate">
+                    <label for="chocolate">Chocolate</label><br>
+                </th>
+            </tr>
+        </table>
+        <p>Notes:</p>
+        <!-- Textbox  -->
+        <textarea id="specialOrder" name="special" row="10" col="100"
+            placeholder="Enter any special instructions here.">
+        </textarea><br>
+        <!-- button -->
+        <input type="submit" value="Order" id="order">
+    </div>
+    <!-- Thank you message-->
+    <p id="thankYouMsg" style="text-align: center;">Thank you! Your order has been placed</p>
+    <!-- Dropdown Menu-->
+    <div class="dropdown">
+        <h3>Orders for <button class="dropbtn">Jan</button></h3>
+        <div class="dropdown-content">
+        </div>
+    </div>
+    <!-- List-->
+    <li>11 Cherry</li>
+    <li>17 Chocolate</li>
+    <li>31 Plain</li>
+
+</body>
+
+</html>
