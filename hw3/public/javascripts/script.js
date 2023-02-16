@@ -20,6 +20,20 @@ $(document).ready(function () {
     $("a").click(function() {
         let month = $(this).text();
         $(".dropbtn").html(month);
+        //array of listId's for the count
+        listId = ["cherryCount", "chocoCount", "plainCount"];
+        //Post request
+        $.post('/orders', function(result){
+            //results is the value sent from the router which is the json Object
+            data = result["data"]
+            for (let i = 0; i < data.length; i++){
+                console.log(listId[i]);
+                console.log(document.getElementById(listId[i]).html)
+                document.getElementById(listId[i]).innerHTML = data[i]["quantity"] + " " + data[i]["toppings"];
+                
+            }
+        })
+    
     })
     
 });
